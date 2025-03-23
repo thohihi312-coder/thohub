@@ -43,7 +43,7 @@ local Tabs = {
         Main8=Window:AddTab({ Title="Volcanic" }),
         Main9=Window:AddTab({ Title="Shop" }),
         Main10=Window:AddTab({ Title="Setting" }),
-}                                               Toggle = Tabs.Main0:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
+}                                               Toggle = Tabs.Main1:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(V)
     _EVZ.lev = V
 end)
