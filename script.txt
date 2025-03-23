@@ -45,7 +45,7 @@ local Tabs = {
         Main10=Window:AddTab({ Title="Setting" }),
 }                                           
 local DiscordButton = Tabs.Main0:AddButton({
-    Title = "Tho Hihi Community (Discord)",
+    Title = "Tho Hihi (Discord)",
     Callback = function()
         setclipboard("https://discord.gg/your-invite-link") -- Copy link vào clipboard
         game.StarterGui:SetCore("SendNotification", {
@@ -57,7 +57,7 @@ local DiscordButton = Tabs.Main0:AddButton({
 })
 
 local YouTubeButton = Tabs.Main0:AddButton({
-    Title = "Thọ Hihi (YouTube)",
+    Title = "Thọ Hihi Community (YouTube)",
     Callback = function()
         setclipboard("https://www.youtube.com/@thohihidz")
         game.StarterGui:SetCore("SendNotification", {
@@ -67,12 +67,12 @@ local YouTubeButton = Tabs.Main0:AddButton({
         })
     end
 })
-local SkillInfo = Tabs.Main0:AddLabel("Kỹ năng: Chưa có thông tin")
+local SkillInfo = Tabs.Main0:AddLabel({
 
 local UpdateSkillButton = Tabs.Main0:AddButton({
     Title = "Phát Triển Tho",
     Callback = function()
-        local skill = "Ki Năng Coder : Del có" -- Thay bằng kỹ năng thực tế
+        local skill = "Ki Năng Coder : Del có"
         SkillInfo:SetText(skill)
     end
 })
