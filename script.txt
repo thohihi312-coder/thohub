@@ -67,15 +67,50 @@ local YouTubeButton = Tabs.Main0:AddButton({
         })
     end
 })
-local SkillInfo = Tabs.Main0:AddLabel({
 
-local UpdateSkillButton = Tabs.Main0:AddButton({
-    Title = "Phát Triển Tho",
-    Callback = function()
-        local skill = "Ki Năng Coder : Del có"
-        SkillInfo:SetText(skill)
+Toggle = Tabs.Main1:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
+Toggle:OnChanged(function(V)
+    _EVZ.lev = V
+end)
+function StartAutoFarm()
+    while AutoFarm and wait(0.1) do
+        if not AutoFarm then return end -- Dừng nếu toggle tắt
+
+        local Player = game.Players.LocalPlayer
+        local Character = Player.Character or Player.CharacterAdded:Wait()
+        local Root = Character:FindFirstChild("HumanoidRootPart")
+
+        if not Root then return end
+
+        -- Lấy vị trí quái phù hợp với level
+        local MobPosition = GetMobPosition(Player)
+
+        -- Teleport lên trên đầu quái
+        Root.CFrame = CFrame.new(MobPosition + Vector3.new(0, 20, 0))
+
+        -- Tấn công quái
+        AttackMob()
     end
-})
+end
+
+function GetMobPosition(Player)
+    local Level = Player.Data.Level.Value -- Lấy level hiện tại
+
+    if Level >= 1 and Level < 50 then
+        return Vector3.new(100, 10, 500) -- Vị trí quái cấp thấp
+    elseif Level >= 50 and Level < 100 then
+        return Vector3.new(200, 10, 1000) -- Vị trí quái trung bình
+    else
+        return Vector3.new(300, 10, 1500) -- Vị trí quái cấp cao
+    end
+end
+
+function AttackMob()
+    local VirtualInputManager = game:GetService("VirtualInputManager")
+    VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.F, false, game) -- Nhấn phím F để đánh bằng võ
+end
+
+
 
 Toggle = Tabs.Main1:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(V)
