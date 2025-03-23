@@ -43,7 +43,41 @@ local Tabs = {
         Main8=Window:AddTab({ Title="Volcanic" }),
         Main9=Window:AddTab({ Title="Shop" }),
         Main10=Window:AddTab({ Title="Setting" }),
-}                                               Toggle = Tabs.Main1:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
+}                                           
+local DiscordButton = Tabs.Main0:AddButton({
+    Title = "Tho Hihi Community (Discord)",
+    Callback = function()
+        setclipboard("https://discord.gg/your-invite-link") -- Copy link vào clipboard
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Tho Hub";
+            Text = "Link Discord đã được sao chép!";
+            Duration = 3;
+        })
+    end
+})
+
+local YouTubeButton = Tabs.Main0:AddButton({
+    Title = "Thọ Hihi (YouTube)",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@thohihidz")
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Tho Hub";
+            Text = "Link YouTube đã được sao chép!";
+            Duration = 3;
+        })
+    end
+})
+local SkillInfo = Tabs.Main0:AddLabel("Kỹ năng: Chưa có thông tin")
+
+local UpdateSkillButton = Tabs.Main0:AddButton({
+    Title = "Phát Triển Tho",
+    Callback = function()
+        local skill = "Ki Năng Coder : Del có" -- Thay bằng kỹ năng thực tế
+        SkillInfo:SetText(skill)
+    end
+})
+
+Toggle = Tabs.Main1:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(V)
     _EVZ.lev = V
 end)
