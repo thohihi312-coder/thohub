@@ -33,15 +33,16 @@ local Window = Fluent:CreateWindow({
 })
 local Tabs = {
         Main0=Window:AddTab({ Title="Main" }),
-        Main1=Window:AddTab({ Title="Item" }),
-        Main0=Window:AddTab({ Title="Quest" }),
-        Main0=Window:AddTab({ Title="Dojo" }),
-        Main0=Window:AddTab({ Title="Sea Event" }),
-        Main0=Window:AddTab({ Title="Setting" }),
-        Main0=Window:AddTab({ Title="Race V4" }),
-        Main0=Window:AddTab({ Title="Raid" }),
-        Main0=Window:AddTab({ Title="Volcanic" }),
-        Main0=Window:AddTab({ Title="Misc" }),
+        Main1=Window:AddTab({ Title="Farm" }),
+        Main2=Window:AddTab({ Title="Item" }),
+        Main3=Window:AddTab({ Title="Quest" }),
+        Main4=Window:AddTab({ Title="Draco" }),
+        Main5=Window:AddTab({ Title="Sea Event" }),
+        Main6=Window:AddTab({ Title="Race V4" }),
+        Main7=Window:AddTab({ Title="Raid" }),
+        Main8=Window:AddTab({ Title="Volcanic" }),
+        Main9=Window:AddTab({ Title="Shop" }),
+        Main10=Window:AddTab({ Title="Setting" }),
 }                                               Toggle = Tabs.Main0:AddToggle("Toggle", { Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(V)
     _EVZ.lev = V
