@@ -395,7 +395,7 @@ end
 function CheckLevel()
     local v197 = game:GetService("Players").LocalPlayer.Data.Level.Value;
     if Sea1 then
-        if ((v197 == 1) or (v197 &lt;= 9) or (SelectMonster == "Bandit")) then
+        if ((v197 == 1) or (v197 lt;= 9) or (SelectMonster == "Bandit")) then
             Ms = "Bandit";
             NameQuest = "BanditQuest1";
             QuestLv = 1;
