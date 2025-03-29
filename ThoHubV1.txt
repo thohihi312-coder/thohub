@@ -11961,7 +11961,7 @@ local v122 = game:GetService("Players");
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Tho Hub",
 	Text = "Loading...",
-	Icon = "rbxthumb://type=Asset&id=&w=150&h=150",
+	Icon = "rbxthumb://type=Asset&id=105330738632478&w=150&h=150",
 	Duration = 10
 });
 spawn(function()
