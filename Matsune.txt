@@ -3068,10 +3068,10 @@ end
 local library = {}
 
 _G.Color = Color3.fromRGB(154, 240, 17) 
-_G.imageLogo = "rbxassetid://12940626152"
-_G.Logo = "rbxassetid://12940626152"
-_G.NameHub = "Made By Dragon Toro" -- ชื่อ Hub
-_G.Title = "Matsune Hub Script blox fruits" -- คำอธิบาย
+_G.imageLogo = "rbxassetid://106829572513243"
+_G.Logo = "rbxassetid://106829572513243"
+_G.NameHub = "Made By Tho Hihi" -- ชื่อ Hub
+_G.Title = "Goku Hub Script blox fruits" -- คำอธิบาย
 -----------------------------------------------------------------
 
 local isUIEnabled = true 
